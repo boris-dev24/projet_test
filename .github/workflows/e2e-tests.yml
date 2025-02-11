@@ -1,4 +1,4 @@
-name: E2E Tests
+name: Playwright  E2E Tests
 
 on:
   push:
@@ -29,10 +29,10 @@ jobs:
 
       # Étape 4 : Démarrer le serveur (si nécessaire)
       - name: Start server
-        run: npm start &
+        run: node server.js
         env:
           PORT: 3000
 
       # Étape 5 : Exécuter les tests E2E
       - name: Run E2E tests
-        run: npm test -- tests/e2e
+        run:  npx playwright test 

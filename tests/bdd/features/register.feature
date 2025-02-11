@@ -4,7 +4,7 @@ Feature: Inscription utilisateur
 
   Scenario: Un utilisateur s'inscrit avec des informations valides
     Given L'utilisateur est sur la page d'inscription
-    When L'utilisateur saisit un nom "User", un email "user@gmail.com" et un mot de passe "userconnect123"
+    When L'utilisateur saisit un nom "User", un email "userb@gmail.com" et un mot de passe "userconnect123"
     And L'utilisateur soumet le formulaire d'inscription
     Then L'utilisateur doit voir un message "Inscription réussie !"
     And Le statut de la réponse doit être 201
