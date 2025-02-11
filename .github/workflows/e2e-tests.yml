@@ -29,10 +29,16 @@ jobs:
 
       # Étape 4 : Démarrer le serveur (si nécessaire)
       - name: Start server
-        run: node server.js
+        run: nohup node server.js &
         env:
           PORT: 3000
+      
+      # Étape 5 : Attente avant de démarrer les tests (vérifier si le serveur est prêt)
+      - name: Wait for server to be ready
+        run: |
+          sleep 10  # Attente de 10 secondes pour le démarrage du serveur
+          curl --fail http://localhost:3000 || exit 1  # Vérifier que le serveur répond
 
-      # Étape 5 : Exécuter les tests E2E
+      # Étape 6 : Exécuter les tests E2E
       - name: Run E2E tests
         run:  npx playwright test 

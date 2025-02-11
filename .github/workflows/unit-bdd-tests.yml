@@ -29,8 +29,8 @@ jobs:
 
       # Étape 4 : Exécuter les tests unitaires
       - name: Run unit tests
-        run: npm test -- tests/unit
+        run: npm test 
 
       # Étape 5 : Exécuter les tests BDD
       - name: Run BDD tests
-        run: npm test-cucumber -- tests/bdd
+        run: npm run test-cucumber -- tests/bdd
