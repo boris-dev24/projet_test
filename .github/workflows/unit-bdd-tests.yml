@@ -1,0 +1,36 @@
+name: Unit and BDD Tests
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Étape 1 : Checkout du code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Étape 2 : Configurer Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      # Étape 3 : Installer les dépendances
+      - name: Install dependencies
+        run: npm install
+
+      # Étape 4 : Exécuter les tests unitaires
+      - name: Run unit tests
+        run: npm test -- tests/unit
+
+      # Étape 5 : Exécuter les tests BDD
+      - name: Run BDD tests
+        run: npm test-cucumber -- tests/bdd

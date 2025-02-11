@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Amalia",
+    "email": "mudiay@yahoo.ca",
+    "password": "$2a$10$hGGwjWVSEoAgUoLr7W2.FuDf25v3hV.LR.Op2G/XkFgX9QUgdIPuO"
+  },
+  {
+    "name": "User",
+    "email": "user@example.com",
+    "password": "$2a$10$V/YSlMln7eOqEHyaYn/4auOBeLv8wniA3YTVnMVnKXqNoZP/Mermy"
+  },
+  {
+    "name": "boris",
+    "email": "boris@gmail.com",
+    "password": "$2a$10$7NB5D6krzfs0AYzt42zLS.IbDJ6CsBu6QwmvnDCbw4gUaEmd1pakW"
+  },
+  {
+    "name": "User",
+    "email": "user@gmail.com",
+    "password": "$2a$10$TkS6nibqBREiz3mwsspRnuujHVEE2jSQeQYCV6GDQCBZMFq4xE1Zq"
+  }
+]

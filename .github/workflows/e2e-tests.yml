@@ -1,0 +1,38 @@
+name: E2E Tests
+
+on:
+  push:
+    branches:
+      - e2e-tests
+  pull_request:
+    branches:
+      - e2e-tests
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Étape 1 : Checkout du code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Étape 2 : Configurer Node.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      # Étape 3 : Installer les dépendances
+      - name: Install dependencies
+        run: npm install
+
+      # Étape 4 : Démarrer le serveur (si nécessaire)
+      - name: Start server
+        run: npm start &
+        env:
+          PORT: 3000
+
+      # Étape 5 : Exécuter les tests E2E
+      - name: Run E2E tests
+        run: npm test -- tests/e2e
