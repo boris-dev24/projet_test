@@ -18,5 +18,15 @@
     "name": "User",
     "email": "user@gmail.com",
     "password": "$2a$10$TkS6nibqBREiz3mwsspRnuujHVEE2jSQeQYCV6GDQCBZMFq4xE1Zq"
+  },
+  {
+    "name": "User",
+    "email": "userb@gmail.com",
+    "password": "$2a$10$4jQSBDXft2HkGAWe/1s6UucG9SM9smYFz6xG6IEMp2c5MPcYSm9WC"
+  },
+  {
+    "name": "User",
+    "email": "userf@gmail.com",
+    "password": "$2a$10$V8oqU8x5c4kFbaHY0pMZreM7XYg7B7r/rUmuYI0k1q8FtRRdmgY0S"
   }
 ]

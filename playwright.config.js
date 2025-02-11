@@ -9,7 +9,7 @@ export default defineConfig({
    reuseExistingServer: true, //  Ne redémarre pas si un serveur tourne déjà
   },
   use: { // mettre cette partie pour que chronium passe
-    headless: false, // Run tests in headless mode
+    headless: true, // Run tests in headless mode
     viewport: { width: 1280, height: 720 },
     actionTimeout: 10000,
     ignoreHTTPSErrors: true,
